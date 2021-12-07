@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        ul {
+            padding-left: 0px;
+        }
+        a {
+            text-decoration: none !important;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            background-color: rgba(0, 0, 0, 9);                    
+            padding-bottom: 25px;
+        }
+        .nav_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 5%;
+        }
+        .nav_top .logo a {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .nav_top .navbar ul {
+            list-style-type: none;
+        }
+
+        .nav_top .navbar li {
+            float: left;
+        }
+        .nav_top .navbar li a {
+            color: #fff;
+            font-size: 1.3rem;
+            margin: 0px 20px;
+            display: block;
+            position: relative;
+        }
+
+        .nav_top .navbar li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #fff;
+            bottom: -5px;
+            right: 0px;
+            left: auto;
+            transition: .5s ease;
+        }
+
+        .nav_top .navbar li a:hover::after {
+            width: 100%;
+            left: 0px;
+            right: auto;
+        }
+
+        .nav_top .user {
+            border-radius: 50px;
+            background-color: #fff;
+            width: 60px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav_top .user i {
+            color: rgb(133, 133, 133);
+            font-size: 2rem;
+        }
+
+        .nav_bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav_bottom .search {
+            background: #fff;
+            border-radius: 50px;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 10px;
+            padding-left: 15px;
+            transition: 1s ease;
+        }
+
+        .nav_bottom .search div {
+            min-width: 150px;
+            border-radius: 50px;
+            padding: 15px;
+            padding-left: 40px;
+        }
+
+        .nav_bottom .search div h4 {
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+
+        .nav_bottom .search div:hover {
+            background: rgb(201, 201, 201);
+        }
+
+        .nav_bottom .search div input {
+            outline: none;
+            border: none;
+            background: transparent;
+        }
+        .nav_bottom .search div:last-child {
+            display: flex;
+            align-items: center;
+        }
+        .nav_bottom .search div:last-child .i_search {
+            background-color: #fd345c;          
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+            height: fit-content;
+            font-size: 1.3rem;  
+            color: #fff;            
+            padding: 15px;
+        }        
+        .nav_bottom .search div:last-child .i_search i {
+            margin-right: 5px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_top">
+            <div class="logo">
+                <a href="#">
+                    LOGO
+                </a>
+            </div>
+            <ul class="navbar">
+                <li>
+                    <a href="#">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#">Trang chủ</a>
+                </li>
+            </ul>
+            <div class="user">
+                <i class="bx bxs-user-circle"></i>
+            </div>
+        </div>
+        <div class="nav_bottom">
+            <div class="search">
+                <div>
+                    <h4>Adresse</h4>
+                    <input type="text" placeholder="Nhập địa chỉ">
+                </div>
+                <div>
+                    <h4>Arrivee</h4>
+                    <span>Quand?</span>
+                </div>
+                <div>
+                    <h4>Depart</h4>
+                    <span>Quand?</span>
+                </div>
+                <div>
+                    <div>
+                        <h4>Vodageurs</h4>
+                        <span>Qui?</span>
+                    </div>
+                    <div class="i_search">
+                        <i class="bx bx-search"></i>
+                        <span>Rechercher</span>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </nav>
+    <div>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.YO_igBHX1QZxTUjYndVubgHaC4&pid=Api&P=0&w=456&h=178" alt="">
+    </div>
+    <div>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.YO_igBHX1QZxTUjYndVubgHaC4&pid=Api&P=0&w=456&h=178" alt="">
+    </div>
+    <div>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.YO_igBHX1QZxTUjYndVubgHaC4&pid=Api&P=0&w=456&h=178" alt="">
+    </div>
+    <div>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.YO_igBHX1QZxTUjYndVubgHaC4&pid=Api&P=0&w=456&h=178" alt="">
+    </div>
+    <div>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.YO_igBHX1QZxTUjYndVubgHaC4&pid=Api&P=0&w=456&h=178" alt="">
+    </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                var cachTop = $('html').scrollTop()
+                if(cachTop>=80) {
+                    
+                }else {
+                    
+                }
+            })
+        })
+    </script>   
+</body>
+
+</html>

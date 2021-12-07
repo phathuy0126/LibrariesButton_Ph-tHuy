@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libraries Button hover effects</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: .5px;            
+        }
+        h2 {            
+            color: blueviolet;
+            cursor: pointer;
+            position: relative;
+            width: fit-content;
+            margin: 20px auto 50px;
+        }
+        h2::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            background-color: red;
+            bottom: -5px;
+            right: 0px;
+            left: auto;
+            transition: .5s ease;
+        }
+        h2:hover::after {
+            width: 100%;
+            left: 0px;
+            right: auto;
+        }
+        .Libraries {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        a {
+            width: fit-content;
+            text-align: center;
+            background: pink;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 10px 20px;           
+            text-decoration: none; 
+            color: rgb(41, 4, 255);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Libraries Button hover effects</h2>
+    <div class="Libraries">
+        <a href="./btnHover3.html">button heart</a>
+        <a href="./btnHover2.html">button supper sayyan lever 7</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btn hover zoom out</title>    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .btn_zoomOut {            
+            position: relative;
+            width: 300px;
+            height: 100px;
+            cursor: pointer;            
+        }
+        .btn_zoomOut::before {
+            content: "";
+            position: absolute;            
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: orangered;
+            transform-origin: 50% 50%;
+            transition: 1s ease;
+        }
+        .btn_zoomOut:hover:before {
+            width: 0px;
+            height: 0px;            
+        }
+        .btn_zoomOut::after {
+            content: "Hover me";
+            position: absolute;            
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            line-height: 100px;                        
+        }
+
+        .btn_test {
+            margin-top: 100px;
+            position: relative;
+            width: 300px;
+            height: 100px;
+            cursor: pointer; 
+            background-color: aquamarine;
+            transform-origin: 50% 50%;  
+            transition: 1s ease;
+        }
+        .btn_test:hover {
+            width: 0px;
+            height: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn_zoomOut"></button>    
+    <button class="btn_test"></button>
+</body>
+
+</html>

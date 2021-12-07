@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button hover effects</title>    
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            user-select: none;
+        }
+        .btn_1 {
+            width: 100px;
+            height: 40px;
+            background: transparent;    
+            z-index: 9999;        
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .btn_1:hover::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background: red;
+            top: -10px;
+            left: -50px;                    
+            animation: hihi .6s forwards;
+        }   
+        .btn_1:hover::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background: red;
+            bottom: -10px;
+            right: -50px;                  
+            animation: hihi .6s forwards;
+        }  
+        .btn_1 .sub {            
+            position: absolute;
+            width: 95%;
+            height: 90%;
+            background: #fff;
+            top: 2px;
+            left: 2px;
+            z-index: 1;     
+            line-height: 30px;
+            font-weight: bold;
+            transition: .6s ease;                   
+        }      
+        .btn_1:hover .sub {
+            background: royalblue;
+            color: #fff;
+        }  
+        @keyframes hihi {
+            100% {
+                width: 160%;
+            }
+        }        
+    </style>
+</head>
+<body>
+    <button class="btn_1"><div class="sub">Hover me</div></button>    
+</body>
+</html>
